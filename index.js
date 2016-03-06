@@ -36,8 +36,8 @@ render(
   <Provider store={store}>
     <Router history={history}>
       <Route path='/' component={AppContainer}>
-        <IndexRoute component={Login} />
-        <Route path="app" component={App}/>
+        <IndexRoute component={App} />
+        //<Route path="app" component={App}/>
       </Route>
     </Router>
   </Provider>,
