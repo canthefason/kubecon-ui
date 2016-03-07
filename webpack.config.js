@@ -3,10 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './index'
-  ],
+  entry: path.resolve(__dirname, './index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -14,7 +11,6 @@ module.exports = {
   },
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {
@@ -25,9 +21,9 @@ module.exports = {
         exclude: /node_modules/,
         include: __dirname
       },
-      { 
-        test: /\.css$/, 
-        loader: "style-loader!css-loader" 
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
       }
     ]
   }
