@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: path.resolve(__dirname, './index.js'),
+  entry: path.resolve(__dirname, './src/index.js'),
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -18,8 +18,7 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: [ 'babel' ],
-        exclude: /node_modules/,
-        include: __dirname
+        exclude: /node_modules/
       },
       {
         test: /\.css$/,

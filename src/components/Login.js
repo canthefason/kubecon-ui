@@ -8,7 +8,7 @@ const Login = () => (
       <input type="text" className="form-control username" placeholder="username"/>
     </div>
     <div className="col-sm-10">
-      <input type="password" className="form-control password"placeholder="password"/>
+      <input type="password" className="form-control password" placeholder="password"/>
     </div>
     <button type="submit" className="hidden submit"></button>
   </form>
@@ -16,4 +16,4 @@ const Login = () => (
 
 
 export default Login
- 
+
