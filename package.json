@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "simple todolist app for kubecon",
   "scripts": {
-    "compile": "webpack",
+    "compile": "webpack -p",
     "start": "node server.js",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch"
